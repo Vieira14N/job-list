@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'League Spartan', Arial, Helvetica, sans-serif;
 }
 
 ul{
@@ -35,6 +36,7 @@ main{
     min-height: calc(100vh - 10rem);
     background-color: hsl(180, 52%, 96%);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 30px 0;
 }
@@ -48,36 +50,77 @@ main{
     background-color: white;
     padding: 35px 35px 35px 60px;
     border-radius: 8px;
+    margin-top: 20px;
 }
 
 .job-container-info{
     display: flex;
-    align-items: center;
+    
 }
 
 .job-container-info img {
     margin-right: 35px;
 }
 
+.job-container-info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .job-container-info h2{
     display: inline-block;
     font-size: 18px;
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+    margin-right: 10px;
 }
 
 .job-container-info h3{
-    margin-bottom: 10px;
+    font-size: 20px;
+    color: hsl(180, 14%, 20%);
 }
 
 .job-container-info span{
     font-size: 12px;
     font-weight: 700;
+    color: white;
+    padding: 6px 6px 3px 6px;
+    border-radius: 10px;
+}
+
+.job-container-info .new{
+    background-color: hsl(180, 29%, 50%);
+    margin-right: 5px;
+}
+
+.job-container-info .feat{
+    background-color: hsl(180, 14%, 20%);
+}
+
+.job-container-info ul {
+    align-items: center;
 }
 
 .job-container-info ul li {
     margin-right: 10px;
+    color: hsl(180, 8%, 52%);
+    font-size: 16px;
+}
+
+.job-container-info ul .circle{
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: hsla(180, 8%, 52%, 0.4);
+    border: 1px solid hsla(180, 8%, 52%, 0.4);
+    border-radius: 50%;
 }
 
 .job-container-lang li {
     margin-left: 10px;
+    color: hsl(180, 29%, 50%);
+    background-color: hsl(180, 52%, 96%);
+    padding: 6px 6px 3px 6px;
+    border-radius: 3px;
 }

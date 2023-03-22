@@ -81,6 +81,11 @@ main{
     color: hsl(180, 14%, 20%);
 }
 
+.job-container-info h3:hover{
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+
 .job-container-info span{
     font-size: 12px;
     font-weight: 700;
@@ -120,7 +125,14 @@ main{
 .job-container-lang li {
     margin-left: 10px;
     color: hsl(180, 29%, 50%);
+    font-weight: 700;
     background-color: hsl(180, 52%, 96%);
     padding: 6px 6px 3px 6px;
     border-radius: 3px;
+}
+
+.job-container-lang li:hover{
+    background-color: hsl(180, 29%, 50%);
+    color: hsl(180, 31%, 95%);
+    cursor: pointer;
 }

@@ -19,7 +19,7 @@ export function createJobCard(obj, className) {
           <h2>${obj.company}</h2>
           <span class="new">NEW!</span>
           <span class="feat">FEATURED</span>
-        </div>
+          </div>
         <h3>${obj.position}</h3>
         <ul>
           <li>${obj.postedAt}</li>

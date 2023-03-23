@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     response.then(info => {
         info.forEach(array => {
             createJobCard(array,'main')
-            console.log(e.target)
         })
     })
 

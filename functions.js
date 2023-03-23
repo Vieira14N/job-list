@@ -49,6 +49,13 @@ export function createJobCard(obj, className) {
         })
     }
     
+    const elementeSpan = jobContainer.childNodes[1].childNodes[3].childNodes[1].childNodes 
+    if(!obj.new) elementeSpan[3].remove()
+    if(!obj.featured) {
+      if(elementeSpan[4].nodeName === 'SPAN') elementeSpan[4].remove()
+      else elementeSpan[5].remove()
+    }
+    
     jobContainer.appendChild(list)
     mainContainer.appendChild(jobContainer)
 }

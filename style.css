@@ -31,6 +31,68 @@ header{
     height: 10rem;
 }
 
+header .filter-div {
+    width: 75%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    top: 8rem;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .filter-div.active{
+    display: flex;
+}
+
+header .filter-div p{
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+}
+
+header .filter-div p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header .filter-div div {
+    display: flex;
+}
+
+header .filter-div .filter{
+    display: flex;
+    margin-right: 10px;
+}
+
+header .filter-div .filter span {
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+    background-color: hsl(180, 52%, 96%);
+    padding: 6px 6px 3px 6px;
+    margin: 0;
+    font-size: 18px;
+}
+
+header .filter-div .filter .text{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+header .filter-div .filter .x{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: hsl(180, 29%, 50%);
+    color: hsl(180, 52%, 96%);
+}
+
+header .filter-div .filter .x:hover{
+    background-color: hsl(180, 14%, 20%);
+}
+
 main{
     width: 100%;
     min-height: calc(100vh - 10rem);
@@ -48,7 +110,7 @@ main{
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 35px 35px 35px 60px;
+    padding: 35px;
     border-radius: 8px;
     margin-top: 20px;
 }

@@ -1,6 +1,7 @@
 import {
     onFetch,
     createJobCard,
+    filterJobs,
 } from './functions.js'
 
 // OnLoad (DOMContentLoaded) Script
@@ -14,3 +15,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
     })
 
 })
+
+// onClick event
+const filterDiv = document.querySelector('.filter-div')
+
+const bodyElement = document.querySelector('body')
+bodyElement.addEventListener('click', (e) => {
+    if(e.target.localName === 'li') filterJobs(e.target.innerText)
+    if(e.target.className === 'clear') filterDiv.classList.remove('active')
+})
+

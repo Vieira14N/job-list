@@ -77,3 +77,10 @@ export function filterJobs(element) {
   `
   container.appendChild(filter)
 }
+
+export function clearAllJobs() {
+  const filterDiv = document.querySelector('.filter-div')
+  const container = document.querySelector('.filter-div div')
+  container.innerHTML = ''
+  filterDiv.classList.remove('active')
+}

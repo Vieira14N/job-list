@@ -2,6 +2,7 @@ import {
     onFetch,
     createJobCard,
     filterJobs,
+    clearAllJobs,
 } from './functions.js'
 
 // OnLoad (DOMContentLoaded) Script
@@ -22,6 +23,7 @@ const filterDiv = document.querySelector('.filter-div')
 const bodyElement = document.querySelector('body')
 bodyElement.addEventListener('click', (e) => {
     if(e.target.localName === 'li') filterJobs(e.target.innerText)
-    if(e.target.className === 'clear') filterDiv.classList.remove('active')
+    if(e.target.className === 'clear') clearAllJobs()
+    if(e.target.alt === 'remove') e.target.parentElement.parentElement.remove()
 })
 

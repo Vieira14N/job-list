@@ -64,7 +64,9 @@ export function createJobCard(obj, className) {
 
 // Filters job's list
 
-export function filterJobs(element) {
+let jobs = []
+
+export function addFilter(element) {
   const filterDiv = document.querySelector('.filter-div')
   filterDiv.classList.add('active')
 
@@ -75,12 +77,23 @@ export function filterJobs(element) {
                   <span class="text">${element}</span>
                   <span class="x"> <img width="14px" src="./images/icon-remove.svg" alt="remove"> </span>
   `
+  jobs.push(element)
+  console.log(jobs)
   container.appendChild(filter)
 }
 
-export function clearAllJobs() {
+export function removeFilter(element){
+  element.parentElement.parentElement.remove()
+  const elementName = element.parentElement.parentElement.children[0].innerText
+  const index = jobs.indexOf(elementName)
+  jobs.splice(index,1)
+  console.log(jobs)
+}
+
+export function clearAllFilters() {
   const filterDiv = document.querySelector('.filter-div')
   const container = document.querySelector('.filter-div div')
   container.innerHTML = ''
+  jobs = []
   filterDiv.classList.remove('active')
 }

@@ -67,6 +67,9 @@ export function createJobCard(obj, className) {
 let jobs = []
 
 export function addFilter(element) {
+  const mainContainer = document.querySelector(`.main`)
+  mainContainer.innerHTML = ''
+
   const filterDiv = document.querySelector('.filter-div')
   filterDiv.classList.add('active')
 
@@ -78,7 +81,15 @@ export function addFilter(element) {
                   <span class="x"> <img width="14px" src="./images/icon-remove.svg" alt="remove"> </span>
   `
   jobs.push(element)
-  console.log(jobs)
+  //console.log(jobs)
+
+  const response = onFetch('./data.json')
+  response.then(info => {
+    info.forEach(obj => {
+      console.log(typeof(obj))
+    })
+  })
+
   container.appendChild(filter)
 }
 
@@ -87,7 +98,7 @@ export function removeFilter(element){
   const elementName = element.parentElement.parentElement.children[0].innerText
   const index = jobs.indexOf(elementName)
   jobs.splice(index,1)
-  console.log(jobs)
+  //console.log(jobs)
 }
 
 export function clearAllFilters() {

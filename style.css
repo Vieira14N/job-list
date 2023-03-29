@@ -113,6 +113,20 @@ main{
     padding: 35px;
     border-radius: 8px;
     margin-top: 20px;
+    transform: translateX(-20px);
+    animation-name: slide;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .job-container-info{

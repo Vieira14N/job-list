@@ -1,0 +1,47 @@
+@media screen and (max-width: 1040px) {
+    .job-container{
+        flex-wrap: wrap;
+        width: 90%;
+        padding: 35px 35px 20px 35px;
+        margin-top: 30px;
+    }
+
+    .job-container-info{
+        position: relative;
+        height: 100px;
+        width: 100%;
+        border-bottom: 1px solid hsla(180, 14%, 20%,0.2);
+        padding-bottom: 20px;
+    }
+
+    .job-container-info img {
+        position: absolute;
+        width: 50px;
+        top: -60px;
+    }
+
+    .job-container-lang {
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .job-container-lang li{
+        margin-left: 0;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    header .filter-div {
+        width: 90%;
+        padding: 20px 35px;
+        top: 6.2rem;
+    }
+
+    header .filter-div div {
+        flex-wrap: wrap;
+    }
+
+    .filter{
+        margin: 5px;
+    }
+}
